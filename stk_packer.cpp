@@ -1,18 +1,19 @@
-﻿#include <iostream>
+// Actually doesn't work, engine can't decompress entries somewhy
+#include <iostream>
 #include <fstream>
 #include <vector>
 #include <string>
 #include <cstdint>
 #include <iomanip>
-#include <cstring>     // For memcpy, memset
-#include <numeric>     // For std::accumulate
-#include <algorithm>   // For std::min, std::sort
-#include <filesystem>  // For directory traversal (C++17)
-#include <stdexcept>   // For runtime_error
+#include <cstring>
+#include <numeric>
+#include <algorithm>
+#include <filesystem>
+#include <stdexcept>
 #include <array>
-#include <thread>      // For std::thread
-#include <mutex>       // For std::mutex and std::lock_guard
-#include <atomic>      // For std::atomic
+#include <thread>
+#include <mutex>
+#include <atomic>
 
 // LZMA SDK headers
 extern "C" {
@@ -359,4 +360,5 @@ int main(int argc, char* argv[]) {
     std::cout << "  Total File Data Size (xored, compressed): " << total_data_size << " bytes" << std::endl;
 
     return 0;
+
 }
